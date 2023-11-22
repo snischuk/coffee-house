@@ -7,9 +7,10 @@ body {
 }
 
 svg {
-  color: red;
+  fill: currentColor;
+  /* color: red; */
 }
 
-use {
+/* use {
   fill: currentColor;
-}
+} */
