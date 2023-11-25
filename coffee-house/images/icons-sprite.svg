@@ -29,8 +29,8 @@
         <path d="M13.334 9.16663H15.4173C16.5679 9.16663 17.5007 10.0994 17.5007 11.25C17.5007 12.4006 16.5679 13.3333 15.4173 13.3333H14.1673" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
-    <symbol id="arrow-right" width="24" height="24" viewBox="0 0 24 24">
-        <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+    <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
      <symbol id="apple-store" width="36" height="36" viewBox="0 0 36 36">

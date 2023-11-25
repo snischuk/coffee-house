@@ -3,15 +3,12 @@ body {
   font-family: Inter, sans-serif;
   font-weight: 600;
   background-color: var(--bg-body);
+
 }
 
-svg {
-  fill: currentColor;
+.hero {
+  margin-bottom: 100px;
 }
-/* use {
-  fill: currentColor;
-} */
-
 
 .container-hero {
   position: relative;
@@ -77,9 +74,6 @@ svg {
   align-items: center;
 }
 
-/* .button-primary svg {
-  fill: none;
-} */
 .icon-coffee-cup {
   margin-left: 0;
   width: 0;
@@ -92,4 +86,113 @@ svg {
   margin-left: 8px;
   width: 20px;
   opacity: 1;
+}
+
+.products {
+  max-width: 1440px;
+  margin: 0 auto 100px auto;
+  padding: 0 var(--custom-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+.products-title {
+  text-align: center;
+  font-size: 60px;
+  line-height: 75px;
+  color: var(--text-dark);
+}
+
+.products-title-accent {
+  color: var(--text-accent);
+  font-style: italic;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-btn {
+  cursor: pointer;
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--border-dark);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.slider-btn:hover {
+  background-color: var(--bg-container);
+}
+
+.icon-arrow-right {
+  stroke: var(--text-dark);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.icon-arrow-right-rotated {
+  transform: rotate(180deg);
+}
+
+.slider-btn:hover .icon-arrow-right {
+  stroke: var(--text-light);
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  max-width: 480px;
+  text-align: center;
+}
+
+.slider-image {
+  margin-bottom: 4px;
+}
+
+.slider-title {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.slider-description {
+  color: var(--text-dark);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.slider-price {
+  color: var(--text-dark);
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.slider-lines {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+}
+
+.slider-line {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: var(--border-light);
+}
+
+.slider-line.active {
+  background-color: var(--border-dark);
 }

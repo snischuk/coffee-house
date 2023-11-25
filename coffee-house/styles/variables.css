@@ -4,11 +4,11 @@
   --text-accent: #B0907A;
 
   --bg-body: #E1D4C9;
-  /* --bg-container: #665F55;
-  --bg-backdrop: #403F3DCC;
+  --bg-container: #665F55;
+  /* --bg-backdrop: #403F3DCC; */
 
   --border-dark: #665F55;
-  --border-light: #C1B6AD; */
+  --border-light: #C1B6AD; 
 
   --custom-gap: 40px;
 }
