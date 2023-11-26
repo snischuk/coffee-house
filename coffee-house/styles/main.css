@@ -274,6 +274,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  flex: 1 0 0;
 }
 
 .offer-title {
