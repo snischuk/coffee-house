@@ -1,0 +1,82 @@
+.mobile-app {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  max-width: 1440px;
+  margin: 0 auto 100px auto;
+  padding: 0 var(--custom-gap);
+}
+
+.mobile-app__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1 0 0;
+}
+
+.mobile-app__title {
+  color: var(--text-dark);
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 75px;
+}
+
+.mobile-app__title--accent {
+  color: var(--text-accent);
+  font-style: italic;
+}
+
+.mobile-app__text {
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.mobile-app__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.mobile-app__button {
+  display: flex;
+  gap: 8px;
+  width: 200px;
+  padding: 12px 20px;
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.mobile-app__button:hover {
+  background-color: var(--bg-container);
+  color: var(--text-light);
+}
+
+.mobile-app__button-icon {
+  fill: var(--text-dark);
+  transition: fill 0.3s ease-in-out
+}
+
+.mobile-app__button:hover .mobile-app__button-icon {
+  fill: var(--text-light);
+}
+
+.mobile-app__button-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-app__button-text-top {
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.mobile-app__image {
+  width: 100%;
+  max-width: 630px;
+}

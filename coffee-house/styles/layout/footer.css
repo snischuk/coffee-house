@@ -4,7 +4,7 @@
   padding: 0 var(--custom-gap);
 }
 
-.contacts-container {
+.contacts__container {
   padding: 100px;
   display: flex;
   align-items: center;
@@ -14,11 +14,11 @@
 
 }
 
-.contacts-left {
+.contacts__left {
   flex: 1 0 0;
 }
 
-.contacts-title {
+.contacts__title {
   color: var(--text-light);
   font-size: 60px;
   font-weight: 600;
@@ -26,17 +26,17 @@
   margin-bottom: 40px;
 }
 
-.contacts-title-accent {
+.contacts__title--accent {
   color: var(--text-accent);
   font-style: italic;
 }
 
-.contacts-list-links-social {
+.contacts__list-links-social {
   display: flex;
   gap: 10px;
 }
 
-.contacts-link-social {
+.contacts__link-social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,40 +46,40 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.contacts-link-social:hover {
+.contacts__link-social:hover {
   background-color: var(--bg-body);
 }
 
-.contacts-icon-social {
+.contacts__icon-social {
   fill: none;
   stroke: var(--text-light);
   transition: stroke 0.3s ease-in-out;
 
 }
 
-.contacts-link-social:hover .contacts-icon-social {
+.contacts__link-social:hover .contacts__icon-social {
   stroke: var(--text-dark);
 }
 
-.contacts-right {
+.contacts__right {
   flex: 1 0 0;
 }
 
-.contacts-subtitle {
+.contacts__subtitle {
   color: var(--text-light);
   font-size: 24px;
   line-height: 30px;
   margin-bottom: 36px;
 }
 
-.contacts-list-links-service {
+.contacts__list-links-service {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-.contacts-link-service,
-.contacts-schedule {
+.contacts__link-service,
+.contacts__schedule {
   position: relative;
   color: var(--text-light);
   font-size: 16px;
@@ -87,7 +87,7 @@
   padding: 4px 0;
 }
 
-.contacts-link-service::after {
+.contacts__link-service::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -99,11 +99,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-.contacts-link-service:hover::after {
+.contacts__link-service:hover::after {
   opacity: 1;
 }
 
-.contacts-icon-service {
+.contacts__icon-service {
   fill: none;
   stroke: var(--text-light);
   margin-right: 10px;

@@ -2,25 +2,25 @@
     padding: 18px 0;
 }
 
-.container {
+.header__container {
     max-width: 1440px;
     padding: 0 40px;
     margin: 0 auto;
 }
 
-.nav {
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: 15px;
 }
 
-.list {
+.header__list {
     display: flex;
     column-gap: 40px;
 }
 
-.link {
+.header__link {
     position: relative;
     padding: 10px 0;
     color: var(--text-dark);
@@ -28,7 +28,7 @@
     line-height: 24px;
 }
 
-.link::after {
+.header__link::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -40,22 +40,17 @@
     transition: all 0.3s ease-in-out;
 }
 
-.link:hover::after {
+.header__link:hover::after {
     left: 0;
     width: 100%;
     opacity: 1;
 }
 
-.link-logo {
-    pointer-events: none;
-    cursor: default;
-}
-
-.link-coffee-cup {
+.header__link--coffee-cup {
     display: inline-flex;
     column-gap: 8px;
 }
 
-.link-coffee-cup svg {
+.header__icon-coffee-cup {
     fill: none;
 }

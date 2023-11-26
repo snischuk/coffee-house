@@ -1,0 +1,106 @@
+.favorites {
+  max-width: 1440px;
+  margin: 0 auto 100px auto;
+  padding: 0 var(--custom-gap);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.favorites__title {
+  text-align: center;
+  font-size: 60px;
+  line-height: 75px;
+  color: var(--text-dark);
+}
+
+.favorites__title--accent {
+  color: var(--text-accent);
+  font-style: italic;
+}
+
+.favorites__slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.favorites__slider-btn {
+  cursor: pointer;
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid var(--border-dark);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.favorites__slider-btn:hover {
+  background-color: var(--bg-container);
+}
+
+.favorites__icon-arrow-right {
+  stroke: var(--text-dark);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.favorites__icon-arrow-right--rotated {
+  transform: rotate(180deg);
+}
+
+.favorites__slider-btn:hover .favorites__icon-arrow-right {
+  stroke: var(--text-light);
+}
+
+.favorites__slider-content {
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.favorites__slider-image {
+  margin-bottom: 4px;
+}
+
+.favorites__slider-title {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.favorites__slider-description {
+  color: var(--text-dark);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.favorites__slider-price {
+  color: var(--text-dark);
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.favorites__slider-progress-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+}
+
+.favorites__slider-progress-line {
+  width: 40px;
+  height: 4px;
+  border-radius: 100px;
+  background-color: var(--border-light);
+}
+
+.favorites__slider-progress-line--active {
+  background-color: var(--border-dark);
+}
