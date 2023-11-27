@@ -1,0 +1,8 @@
+@import "./utils/normalize.css";
+@import "./utils/variables.css";
+
+@import "./layout/base.css";
+@import "./layout/header.css";
+@import "./layout/footer.css";
+
+@import "./components/menu.css";
