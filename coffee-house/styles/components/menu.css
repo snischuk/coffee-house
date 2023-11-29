@@ -62,15 +62,31 @@
 }
 
 .menu__button-emoji {
-  padding: 3px 7px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: center;
   background-color: var(--border-light);
+  transition: background-color 0.3s ease-in-out;
 }
 
-.menu__button:hover .menu__button-img {
+.menu__button:hover .menu__button-emoji,
+.menu__button--active .menu__button-emoji{
   background-color: var(--bg-body);
+}
+
+.menu__button-emoji--coffee {
+  background-image: url("../../images/menu/gallery/icons-btns/coffee.png");
+}
+
+.menu__button-emoji--tea {
+  background-image: url("../../images/menu/gallery/icons-btns/tea.png");
+}
+
+.menu__button-emoji--dessert {
+  background-image: url("../../images/menu/gallery/icons-btns/dessert.png");
 }
 
 .menu__list-cards {
