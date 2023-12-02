@@ -11,3 +11,9 @@
 
   --custom-gap: 40px;
 }
+
+@media (max-width: 380px) {
+  :root {  
+    --custom-gap: 16px;
+  }
+}
