@@ -9,7 +9,6 @@
   padding: 0 var(--custom-gap);
 }
 
-
 .enjoy__image {
   width: 100%;
   height: auto;
@@ -19,17 +18,13 @@
 .enjoy__info {
   border-radius: 40px;
   padding: 100px 100px;
-
   display: flex;
   flex-direction: column;
   row-gap: 40px;
-
-  /* background-image: url("../../images/home/enjoy.jpeg"); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("../../images/home/img-hero.jpeg");
-
 }
 
 .enjoy__title {
@@ -94,8 +89,15 @@
     width: 20px;
     opacity: 1;
   }
+}
 
-  .enjoy__image {
-    
+@media (max-width: 380px) {
+  .enjoy__title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .enjoy__info {
+    padding: 60px 16px;
   }
 }
