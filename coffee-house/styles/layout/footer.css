@@ -46,18 +46,10 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.contacts__link-social:hover {
-  background-color: var(--bg-body);
-}
-
 .contacts__icon-social {
   fill: none;
   stroke: var(--text-light);
   transition: stroke 0.3s ease-in-out;
-}
-
-.contacts__link-social:hover .contacts__icon-social {
-  stroke: var(--text-dark);
 }
 
 .contacts__right {
@@ -100,12 +92,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.contacts__link-service:hover::after {
-  left: 0;
-  width: 100%;
-  opacity: 1;
-}
-
 .contacts__icon-service {
   fill: none;
   stroke: var(--text-light);
@@ -129,5 +115,21 @@
   .contacts__title {
     font-size: 32px;
     line-height: 40px;
+  }
+}
+
+@media (hover: hover) {
+  .contacts__link-social:hover {
+    background-color: var(--bg-body);
+  }
+
+  .contacts__link-social:hover .contacts__icon-social {
+    stroke: var(--text-dark);
+  }
+
+  .contacts__link-service:hover::after {
+    left: 0;
+    width: 100%;
+    opacity: 1;
   }
 }

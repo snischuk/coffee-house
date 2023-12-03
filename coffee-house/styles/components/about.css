@@ -56,10 +56,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.about__item:hover .about__image {
-  transform: scale(1);
-}
-
 @media (max-width: 768px) {
   .about__gallery {
     grid-template-columns: 1fr;
@@ -95,5 +91,11 @@
 
   .about__image {
     transform: scale(1.22);
+  }
+}
+
+@media (hover: hover) {
+  .about__item:hover .about__image {
+    transform: scale(1);
   }
 }

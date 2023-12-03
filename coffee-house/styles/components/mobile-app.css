@@ -61,18 +61,9 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.mobile-app__button:hover {
-  background-color: var(--bg-container);
-  color: var(--text-light);
-}
-
 .mobile-app__button-icon {
   fill: var(--text-dark);
   transition: fill 0.3s ease-in-out
-}
-
-.mobile-app__button:hover .mobile-app__button-icon {
-  fill: var(--text-light);
 }
 
 .mobile-app__button-text {
@@ -96,9 +87,20 @@
   .mobile-app {
     row-gap: 40px;
   }
-  
+
   .mobile-app__title {
     font-size: 32px;
     line-height: 40px;
+  }
+}
+
+@media (hover: hover) {
+  .mobile-app__button:hover {
+    background-color: var(--bg-container);
+    color: var(--text-light);
+  }
+
+  .mobile-app__button:hover .mobile-app__button-icon {
+    fill: var(--text-light);
   }
 }
