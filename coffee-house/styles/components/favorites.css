@@ -37,10 +37,6 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.favorites__slider-btn:hover {
-  background-color: var(--bg-container);
-}
-
 .favorites__icon-arrow-right {
   stroke: var(--text-dark);
   transition: stroke 0.3s ease-in-out;
@@ -48,10 +44,6 @@
 
 .favorites__icon-arrow-right--rotated {
   transform: rotate(180deg);
-}
-
-.favorites__slider-btn:hover .favorites__icon-arrow-right {
-  stroke: var(--text-light);
 }
 
 .favorites__slider-content {
@@ -112,7 +104,18 @@
     line-height: 40px;
   }
 
-  .favorites__slider-btn{
-    display: none;;
+  .favorites__slider-btn {
+    display: none;
+    ;
+  }
+}
+
+@media (hover: hover) {
+  .favorites__slider-btn:hover {
+    background-color: var(--bg-container);
+  }
+
+  .favorites__slider-btn:hover .favorites__icon-arrow-right {
+    stroke: var(--text-light);
   }
 }

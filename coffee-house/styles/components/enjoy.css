@@ -73,12 +73,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-.enjoy__button--primary:hover .enjoy__icon-coffee-cup {
-  margin-left: 8px;
-  width: 20px;
-  opacity: 1;
-}
-
 @media (max-width: 768px) {
   .enjoy__info {
     padding: 100px 60px;
@@ -99,5 +93,13 @@
 
   .enjoy__info {
     padding: 60px 16px;
+  }
+}
+
+@media (hover: hover) {
+  .enjoy__button--primary:hover .enjoy__icon-coffee-cup {
+    margin-left: 8px;
+    width: 20px;
+    opacity: 1;
   }
 }
