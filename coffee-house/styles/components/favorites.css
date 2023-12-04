@@ -110,7 +110,7 @@
   }
 }
 
-@media (hover: hover) {
+@media (hover: hover), (pointer: fine) {
   .favorites__slider-btn:hover {
     background-color: var(--bg-container);
   }

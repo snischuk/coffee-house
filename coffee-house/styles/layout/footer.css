@@ -118,7 +118,7 @@
   }
 }
 
-@media (hover: hover) {
+@media (hover: hover), (pointer: fine) {
   .contacts__link-social:hover {
     background-color: var(--bg-body);
   }
