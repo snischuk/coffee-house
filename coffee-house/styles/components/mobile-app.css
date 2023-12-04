@@ -94,7 +94,7 @@
   }
 }
 
-@media (hover: hover) {
+@media (hover: hover), (pointer: fine) {
   .mobile-app__button:hover {
     background-color: var(--bg-container);
     color: var(--text-light);

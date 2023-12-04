@@ -188,7 +188,7 @@
   }
 }
 
-@media (hover: hover) {
+@media (hover: hover), (pointer: fine) {
   .menu__button:hover {
     color: var(--text-light);
     background-color: var(--bg-container);
