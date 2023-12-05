@@ -83,7 +83,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 525px) {
   .mobile-app {
     row-gap: 40px;
   }

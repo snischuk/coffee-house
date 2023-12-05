@@ -79,7 +79,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 525px) {
   .enjoy__title {
     font-size: 42px;
     line-height: 48px;
