@@ -175,7 +175,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 525px) {
   .menu__title {
     font-size: 32px;
     line-height: 40px;

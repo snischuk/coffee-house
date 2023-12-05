@@ -106,7 +106,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 525px) {
   .contacts__container {
     padding: 60px 16px;
     gap: 40px;
