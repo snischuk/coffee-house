@@ -1,5 +1,5 @@
 .header {
-  padding: 17px 0;
+  padding: 20px 0;
 }
 
 .header__container {
@@ -22,7 +22,7 @@
 }
 
 .header__link-logo--disabled {
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .header__links-wrapper {
@@ -62,7 +62,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-
 .header__link--active {
   pointer-events: none;
 }
@@ -85,10 +84,29 @@
   display: none;
 }
 
-
 @media (max-width: 768px) {
   body.js-lock {
     overflow: hidden;
+  }
+
+  .header {
+    z-index: 50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--height-header);
+  }
+
+  .header::before {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-body);
   }
 
   .header__links-wrapper {
@@ -125,6 +143,10 @@
   .header__link {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  .header__link--active {
+    pointer-events: auto;
   }
 
   .header__icon-coffee-cup {
@@ -177,7 +199,8 @@
   }
 }
 
-@media (hover: hover), (pointer: fine) {
+@media (hover: hover),
+(pointer: fine) {
   .header__link:hover::after {
     left: 0;
     width: 100%;

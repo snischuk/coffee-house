@@ -80,6 +80,7 @@
 @media (max-width: 768px) {
   .mobile-app {
     flex-direction: column;
+    scroll-margin-top: var(--header-height);
   }
 }
 

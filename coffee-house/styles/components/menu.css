@@ -151,6 +151,10 @@
 }
 
 @media (max-width: 768px) {
+  .menu {
+    padding-top: calc(20px + var(--header-height));
+  }
+
   .menu__list-cards li:nth-child(n + 5) {
     display: none;
   }
