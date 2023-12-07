@@ -71,15 +71,15 @@
 }
 
 .menu__button-emoji--coffee {
-  background-image: url("../../images/menu/gallery/icons-btns/coffee.png");
+  background-image: url("../../assets/images/menu/gallery/icons-btns/coffee.png");
 }
 
 .menu__button-emoji--tea {
-  background-image: url("../../images/menu/gallery/icons-btns/tea.png");
+  background-image: url("../../assets/images/menu/gallery/icons-btns/tea.png");
 }
 
 .menu__button-emoji--dessert {
-  background-image: url("../../images/menu/gallery/icons-btns/dessert.png");
+  background-image: url("../../assets/images/menu/gallery/icons-btns/dessert.png");
 }
 
 .menu__list-cards {
@@ -152,7 +152,7 @@
 
 @media (max-width: 768px) {
   .menu {
-    padding-top: calc(20px + var(--header-height));
+    padding-top: var(--header-height);
   }
 
   .menu__list-cards li:nth-child(n + 5) {

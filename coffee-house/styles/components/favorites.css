@@ -100,7 +100,7 @@
 
 @media (max-width: 768px) {
   .favorites {
-    padding-top: calc(var(--header-height) + 80px);
+    scroll-margin-top: var(--header-height);     
   }
 }
 

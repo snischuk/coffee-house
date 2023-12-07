@@ -10,19 +10,11 @@
   --border-light: #C1B6AD;
 
   --custom-gap: 40px;
-
   --header-height: 100px;
 }
 
-@media (max-width: 768) {
-  /* :root {
-    --header-height: 100px
-  } */
-
-  @media (max-width: 525px) {
-    :root {
-      --custom-gap: 16px;
-
-    }
+@media (max-width: 525px) {
+  :root {
+    --custom-gap: 16px;
   }
 }
