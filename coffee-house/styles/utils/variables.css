@@ -11,6 +11,7 @@
 
   --custom-gap: 40px;
   --header-height: 100px;
+  --slidesCount: 3;
 }
 
 @media (max-width: 525px) {
