@@ -75,7 +75,6 @@
   transition: all 0.3s ease-in-out;
 }
 
-
 @media (max-width: 800px) {
   .enjoy__info {
     padding: 100px 60px;
@@ -114,6 +113,13 @@
   .enjoy__title {
     font-size: 42px;
     line-height: 48px;
+  }
+}
+
+@media (max-width: 365px) {
+  .enjoy__title {
+    font-size: 34px;
+    line-height: 40px;
   }
 }
 

@@ -85,10 +85,6 @@
 }
 
 @media (max-width: 768px) {
-  body.js-lock {
-    overflow: hidden;
-  }
-
   .header {
     z-index: 1;
     position: fixed;

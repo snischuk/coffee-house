@@ -1,10 +1,11 @@
 import products from '../../assets/data/products.json' assert { type: "json" };
-// import initModal from '../modal/modal.js'
 
 function initTabs() {
     const tabsContainer = document.querySelector('.menu__buttons');
     const cardsContainer = document.querySelector('.menu__list-cards');
     const buttons = document.querySelectorAll('.menu__button');
+    const body = document.querySelector('body');
+    const backdrop = document.querySelector('.modal-backdrop');
 
     let filteredProducts;
 
@@ -91,8 +92,8 @@ function initTabs() {
         }
 
         loadMoreBtn.addEventListener('click', clickLoadMoreBtnHandler);
-
     }
+
     function clickCardHandler(event) {
         const targettedCard = event.target.closest('.menu__card');
 
@@ -113,9 +114,6 @@ function initTabs() {
 
         renderCards(cardsContainer, filteredProducts);
     }
-    //////////////////////////////////
-    const body = document.querySelector('body');
-    const backdrop = document.querySelector('.modal-backdrop');
 
     function closeModal() {
         body.classList.remove('js-lock');
@@ -173,8 +171,8 @@ function initTabs() {
                         </fieldset>
                     </div>
                     <div class="modal__total">
-                        <span class="modal__total__text">Total:</span>
-                        <span class="modal__total__price">$${product.price}</span>
+                        <span class="modal__total-text">Total:</span>
+                        <span class="modal__total-price">$${product.price}</span>
                     </div>
                     <span class="modal__info">
                         <svg class="modal__info-icon" width="40" height="16">
@@ -188,8 +186,28 @@ function initTabs() {
                 </div>
             </form>
         `;
-
     }
+
+    function calculatePriceHandler(product) {
+        const totalPriceElement = document.querySelector('.modal__total-price');
+        const inputs = backdrop.querySelectorAll('input');
+
+        const checkedValues = Array.from(inputs).map((input) => input.checked);
+        const selectedSizes = checkedValues.slice(0, Object.keys(product.sizes).length);
+        const selectedAdditives = checkedValues.slice(Object.keys(product.sizes).length);
+
+        const sizesPrice = Object.keys(product.sizes).reduce((total, size, index) => {
+            return total + (selectedSizes[index] ? parseFloat(product.sizes[size]['add-price']) : 0);
+        }, 0);
+
+        const additivesPrice = product.additives.reduce((total, additive, index) => {
+            return total + (selectedAdditives[index] ? parseFloat(additive['add-price']) : 0);
+        }, 0);
+
+        const finalPrice = parseFloat(product.price) + sizesPrice + additivesPrice;
+        totalPriceElement.innerHTML = `$${finalPrice.toFixed(2)}`;
+    }
+
     function openModal(product) {
         clearContainer(backdrop);
 
@@ -199,7 +217,8 @@ function initTabs() {
         body.classList.add('js-lock');
         backdrop.classList.add('modal-backdrop--active');
 
-        body.addEventListener('click', clickBodyHandler)
+        body.addEventListener('click', clickBodyHandler);
+        backdrop.addEventListener('change', () => calculatePriceHandler(product));
     }
 
     tabsContainer.addEventListener('click', clickTabHandler);

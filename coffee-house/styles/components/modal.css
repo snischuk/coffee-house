@@ -93,9 +93,6 @@
 }
 
 .modal__input-custom {
-  padding: 8px 16px 8px 8px;
-  border: 1px solid red;
-
   padding: 7px 15px 7px 7px;
   display: flex;
   justify-content: center;
@@ -115,12 +112,10 @@
   width: 30px;
   height: 30px;
   padding: 3px 8px;
-
   color: var(--text-dark);
   text-align: center;
   font-size: 16px;
   line-height: 24px;
-
   border-radius: 50%;
   background-color: var(--border-light);
   transition: background-color 0.3s ease-in-out;
@@ -194,17 +189,14 @@
 
   .modal__image-wrapper {
     display: none;
-
   }
 }
 
-@media (hover: hover),
-(pointer: fine) {
+@media (hover: hover), (pointer: fine) {
   .modal__input-custom:hover {
     color: var(--text-light);
     background-color: var(--bg-container);
     border: 1px solid var(--border-dark);
-
   }
 
   .modal__input-custom:hover .modal__button-tag {
