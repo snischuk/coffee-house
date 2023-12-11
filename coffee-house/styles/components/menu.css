@@ -52,7 +52,7 @@
   color: var(--text-light);
   background-color: var(--bg-container);
   border: 1px solid var(--border-dark);
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .menu__button-emoji {
@@ -158,6 +158,10 @@
   .menu__list-cards li:nth-child(n + 5) {
     display: none;
   }
+  
+  .menu__list-cards li.show-more {
+    display: flex;
+  }
 
   .menu__load-more-btn {
     padding: 17px;
@@ -215,3 +219,4 @@
     stroke: var(--text-light);
   }
 }
+
