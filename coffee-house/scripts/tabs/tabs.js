@@ -80,7 +80,7 @@ function initTabs() {
 
     function addLoadMoreBtn() {
         const LIMIT_CARDS = 4;
-
+        // проверить бедиа-видз Б 768 пикселей!
         if (filteredProducts.length > LIMIT_CARDS) {
             loadMoreBtn.style.display = 'flex';
         } else {
