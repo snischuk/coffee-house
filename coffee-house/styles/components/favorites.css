@@ -58,7 +58,7 @@
 }
 
 .favorites__slider-slide {
-  width: 100%;
+  width: calc(100% / var(--slidesCount));
   text-align: center;
   display: flex;
   flex-direction: column;

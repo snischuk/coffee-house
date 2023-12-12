@@ -1,11 +1,11 @@
 import products from '../../assets/data/products.json' assert { type: "json" };
 
 function initTabs() {
-    const tabsContainer = document.querySelector('.menu__buttons');
-    const cardsContainer = document.querySelector('.menu__list-cards');
-    const buttons = document.querySelectorAll('.menu__button');
-    const body = document.querySelector('body');
     const backdrop = document.querySelector('.modal-backdrop');
+    const body = document.querySelector('body');
+    const tabsContainer = document.querySelector('.menu__buttons');
+    const buttons = document.querySelectorAll('.menu__button');
+    const cardsContainer = document.querySelector('.menu__list-cards');
 
     let filteredProducts;
 
@@ -109,8 +109,8 @@ function initTabs() {
         const defaultActiveTab = buttons[0];
         defaultActiveTab.classList.add('menu__button--active');
 
-        const defaultCategory = defaultActiveTab.dataset.tab;
-        filteredProducts = products.filter((product) => product.category === defaultCategory);
+        const defaultCategoryName = defaultActiveTab.dataset.tab;
+        filteredProducts = products.filter((product) => product.category === defaultCategoryName);
 
         renderCards(cardsContainer, filteredProducts);
     }
@@ -189,22 +189,26 @@ function initTabs() {
     }
 
     function calculatePriceHandler(product) {
+        const { sizes, additives, price } = product;
+        const sizesList = Object.keys(sizes);
+        const additivesList = additives;
+
         const totalPriceElement = document.querySelector('.modal__total-price');
         const inputs = backdrop.querySelectorAll('input');
 
         const checkedValues = Array.from(inputs).map((input) => input.checked);
-        const selectedSizes = checkedValues.slice(0, Object.keys(product.sizes).length);
-        const selectedAdditives = checkedValues.slice(Object.keys(product.sizes).length);
+        const selectedSizes = checkedValues.slice(0, sizesList.length);
+        const selectedAdditives = checkedValues.slice(sizesList.length);
 
-        const sizesPrice = Object.keys(product.sizes).reduce((total, size, index) => {
-            return total + (selectedSizes[index] ? parseFloat(product.sizes[size]['add-price']) : 0);
+        const sizesPrice = sizesList.reduce((total, size, index) => {
+            return total + (selectedSizes[index] ? Number.parseFloat(sizes[size]['add-price']) : 0);
         }, 0);
 
-        const additivesPrice = product.additives.reduce((total, additive, index) => {
-            return total + (selectedAdditives[index] ? parseFloat(additive['add-price']) : 0);
+        const additivesPrice = additivesList.reduce((total, additive, index) => {
+            return total + (selectedAdditives[index] ? Number.parseFloat(additive['add-price']) : 0);
         }, 0);
 
-        const finalPrice = parseFloat(product.price) + sizesPrice + additivesPrice;
+        const finalPrice = Number.parseFloat(price) + sizesPrice + additivesPrice;
         totalPriceElement.innerHTML = `$${finalPrice.toFixed(2)}`;
     }
 

@@ -7,10 +7,14 @@ function initSlider() {
 
     let startPointerX;
     let currentSlideIndex = 0;
-    const slideWidth = slideContainer.offsetWidth;
 
     function rollSliderTrack() {
-        track.style.transform = `translateX(${-currentSlideIndex * slideWidth}px)`;
+        const slidesCount = track.childElementCount;
+        const trackWidth = `${100 * slidesCount}%`;
+        track.style.width = trackWidth;
+
+        const percentageWidth = -(currentSlideIndex * 100);
+        track.style.transform = `translateX(${percentageWidth / slidesCount}%)`;
     }
 
     function resetBarAnimation() {
@@ -37,8 +41,8 @@ function initSlider() {
 
     function prevBar() {
         resetBarAnimation();
-
         currentSlideIndex -= 1;
+
         if (currentSlideIndex < 0) {
             currentSlideIndex = bars.length - 1;
         }
@@ -48,8 +52,8 @@ function initSlider() {
 
     function nextBar() {
         resetBarAnimation();
-
         currentSlideIndex += 1;
+
         if (currentSlideIndex > bars.length - 1) {
             currentSlideIndex = 0;
         }
@@ -67,7 +71,8 @@ function initSlider() {
         }
     }
 
-    function pauseAnimationOnHover() {
+    function pauseAnimationOnHover(event) {
+        event.preventDefault();
         bars[currentSlideIndex].style.animationPlayState = 'paused';
     }
 
@@ -97,8 +102,11 @@ function initSlider() {
     nextBtn.addEventListener('click', nextBar);
 
     slideContainer.addEventListener('touchstart', touchDownHandler);
-    slideContainer.addEventListener('touchend', touchUpHandler);
+    slideContainer.addEventListener('touchstart', pauseAnimationOnHover);
 
+    slideContainer.addEventListener('touchend', touchUpHandler);
+    slideContainer.addEventListener('touchend', resumeAnimationOnLeave);
+    
     slideContainer.addEventListener('pointerenter', pauseAnimationOnHover);
     slideContainer.addEventListener('pointerleave', resumeAnimationOnLeave);
 
