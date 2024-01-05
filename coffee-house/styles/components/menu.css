@@ -52,7 +52,6 @@
   color: var(--text-light);
   background-color: var(--bg-container);
   border: 1px solid var(--border-dark);
-  pointer-events: none;
 }
 
 .menu__button-emoji {
@@ -71,15 +70,15 @@
 }
 
 .menu__button-emoji--coffee {
-  background-image: url("../../images/menu/gallery/icons-btns/coffee.png");
+  background-image: url("../../assets/images/menu/gallery/icons-btns/coffee.png");
 }
 
 .menu__button-emoji--tea {
-  background-image: url("../../images/menu/gallery/icons-btns/tea.png");
+  background-image: url("../../assets/images/menu/gallery/icons-btns/tea.png");
 }
 
 .menu__button-emoji--dessert {
-  background-image: url("../../images/menu/gallery/icons-btns/dessert.png");
+  background-image: url("../../assets/images/menu/gallery/icons-btns/dessert.png");
 }
 
 .menu__list-cards {
@@ -151,8 +150,16 @@
 }
 
 @media (max-width: 768px) {
+  .menu {
+    padding-top: var(--header-height);
+  }
+
   .menu__list-cards li:nth-child(n + 5) {
     display: none;
+  }
+
+  .menu__list-cards li.show-more {
+    display: flex;
   }
 
   .menu__load-more-btn {
@@ -211,3 +218,4 @@
     stroke: var(--text-light);
   }
 }
+

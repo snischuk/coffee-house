@@ -99,6 +99,10 @@
 }
 
 @media (max-width: 768px) {
+  .contacts {
+    scroll-margin-top: var(--header-height);
+  }
+
   .contacts__container {
     flex-direction: column;
     align-items: stretch;
@@ -118,7 +122,8 @@
   }
 }
 
-@media (hover: hover), (pointer: fine) {
+@media (hover: hover),
+(pointer: fine) {
   .contacts__link-social:hover {
     background-color: var(--bg-body);
   }

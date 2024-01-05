@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
         <link rel="stylesheet" href="./styles/home-page.css">
         <title>Coffee house</title>
     </head>
@@ -17,7 +17,7 @@
                 <nav class="header__nav">
                     <a class="header__link-logo header__link-logo--disabled" href="./">
                         <svg width="100" height="60">
-                            <use href="./images/icons-sprite.svg#logo"></use>
+                            <use href="./assets/images/icons-sprite.svg#logo"></use>
                         </svg>
                     </a>
                     <div class="header__links-wrapper">
@@ -37,7 +37,7 @@
                         </ul>
                         <a class="header__link" href="./menu.html">Menu
                             <svg class="header__icon-coffee-cup" width="20" height="20">
-                                <use href="./images/icons-sprite.svg#coffee-cup"></use>
+                                <use href="./assets/images/icons-sprite.svg#coffee-cup"></use>
                             </svg>
                         </a>
                     </div>
@@ -48,6 +48,8 @@
         <main>
             <section class="enjoy">
                 <div class="enjoy__container">
+                    <video class="enjoy__promo-video" src="./assets/video/promo-coffee_2160p.webm" poster="./assets/images/home/img-hero.jpeg" autoplay muted
+                        loop></video>
                     <div class="enjoy__info">
                         <h1 class="enjoy__title"><span class="enjoy__title--accent">Enjoy</span> premium coffee at our
                             charming cafe</h1>
@@ -57,7 +59,7 @@
                             space to enjoy their favorite beverage.</p>
                         <a class="enjoy__button enjoy__button--primary" href="./menu.html">Menu
                             <svg class="enjoy__icon-coffee-cup" width="20" height="20">
-                                <use href="./images/icons-sprite.svg#coffee-cup"></use>
+                                <use href="./assets/images/icons-sprite.svg#coffee-cup"></use>
                             </svg>
                         </a>
                     </div>
@@ -67,33 +69,57 @@
                 <h2 class="favorites__title">Choose your <span class="favorites__title--accent">favorite</span> coffee
                 </h2>
                 <div class="favorites__slider">
-                    <button class="favorites__slider-btn" type="button">
+                    <button class="favorites__slider-btn" type="button" data-slider-btn="prev">
                         <svg class="favorites__icon-arrow-right favorites__icon-arrow-right--rotated" width="24"
                             height="24">
-                            <use href="./images/icons-sprite.svg#arrow-right"></use>
+                            <use href="./assets/images/icons-sprite.svg#arrow-right"></use>
                         </svg>
                     </button>
-                    <div class="favorites__slider-content">
-                        <img class="favorites__slider-image" src="./images/home/slider/coffee-slider-1.png"
-                            alt="S’mores Frappuccino">
-                        <h3 class="favorites__slider-title">S’mores Frappuccino</h3>
-                        <p class="favorites__slider-description">This new drink takes an espresso and mixes it with
-                            brown
-                            sugar
-                            and cinnamon before being topped with oat milk.</p>
-                        <span class="favorites__slider-price">$5.50</span>
+                    <div class="favorites__slider-window">
+                        <ul class="favorites__slider-track">
+                            <li class="favorites__slider-slide">
+                                <img class="favorites__slider-image"
+                                    src="./assets/images/home/slider/coffee-slider-1.png" alt="S’mores Frappuccino">
+                                <h3 class="favorites__slider-title">S’mores Frappuccino</h3>
+                                <p class="favorites__slider-description">This new drink takes an espresso and mixes it
+                                    with brown sugar and cinnamon before being topped with oat milk.</p>
+                                <span class="favorites__slider-price">$5.50</span>
+                            </li>
+                            <li class="favorites__slider-slide">
+                                <img class="favorites__slider-image"
+                                    src="./assets/images/home/slider/coffee-slider-2.png" alt="Caramel Macchiato">
+                                <h3 class="favorites__slider-title">Caramel Macchiato</h3>
+                                <p class="favorites__slider-description">Fragrant and unique classic espresso with rich
+                                    caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                <span class="favorites__slider-price">$5.00</span>
+                            </li>
+                            <li class="favorites__slider-slide">
+                                <img class="favorites__slider-image"
+                                    src="./assets/images/home/slider/coffee-slider-3.png" alt="Ice coffee">
+                                <h3 class="favorites__slider-title">Ice coffee</h3>
+                                <p class="favorites__slider-description">A popular summer drink that tones and
+                                    invigorates. Prepared from coffee, milk and ice.</p>
+                                <span class="favorites__slider-price">$4.50</span>
+                            </li>
+                        </ul>
                     </div>
-                    <button class="favorites__slider-btn" type="button">
+                    <button class="favorites__slider-btn" type="button" data-slider-btn="next">
                         <svg class="favorites__icon-arrow-right" width="24" height="24" viewBox="0 0 24 24">
-                            <use href="./images/icons-sprite.svg#arrow-right"></use>
+                            <use href="./assets/images/icons-sprite.svg#arrow-right"></use>
                         </svg>
                     </button>
                 </div>
-                <div class="favorites__slider-progress-bar">
-                    <span class="favorites__slider-progress-line favorites__slider-progress-line--active"></span>
-                    <span class="favorites__slider-progress-line"></span>
-                    <span class="favorites__slider-progress-line"></span>
-                </div>
+                <ul class="favorites__slider-progress-bars">
+                    <li class="favorites__slider-progress-bar-container">
+                        <span class="favorites__slider-progress-bar"></span>
+                    </li>
+                    <li class="favorites__slider-progress-bar-container">
+                        <span class="favorites__slider-progress-bar"></span>
+                    </li>
+                    <li class="favorites__slider-progress-bar-container">
+                        <span class="favorites__slider-progress-bar"></span>
+                    </li>
+                </ul>
             </section>
             <section class="about" id="about">
                 <h2 class="about__title">Resource is <span class="about__title--accent">the perfect and cozy
@@ -102,16 +128,17 @@
                     beverages, relax, catch up with friends, or get some work done.</h2>
                 <div class="about__gallery">
                     <div class="about__item about__item--big-left">
-                        <img class="about__image" src="./images/home/about/about-1.jpeg" alt="Happy girl">
+                        <img class="about__image" src="./assets/images/home/about/about-1.jpeg" alt="Happy girl">
                     </div>
                     <div class="about__item about__item--small-left">
-                        <img class="about__image" src="./images/home/about/about-2.jpeg" alt="Happy boy">
+                        <img class="about__image" src="./assets/images/home/about/about-2.jpeg" alt="Happy boy">
                     </div>
                     <div class="about__item about__item--small-right">
-                        <img class="about__image" src="./images/home/about/about-3.jpeg" alt="Happy cup">
+                        <img class="about__image" src="./assets/images/home/about/about-3.jpeg" alt="Happy cup">
                     </div>
                     <div class="about__item about__item--big-right">
-                        <img class="about__image" src="./images/home/about/about-4.jpeg" alt="Happy boy, girl and cup">
+                        <img class="about__image" src="./assets/images/home/about/about-4.jpeg"
+                            alt="Happy boy, girl and cup">
                     </div>
                 </div>
             </section>
@@ -126,7 +153,7 @@
                     <div class="mobile-app__buttons">
                         <a class="mobile-app__button" href="https://www.apple.com/app-store/" target="_blank">
                             <svg class="mobile-app__button-icon" width=" 36" height="36">
-                                <use href="./images/icons-sprite.svg#apple-store"></use>
+                                <use href="./assets/images/icons-sprite.svg#apple-store"></use>
                             </svg>
                             <span class="mobile-app__button-text">
                                 <span class="mobile-app__button-text-top">Available on the</span>
@@ -135,7 +162,7 @@
                         </a>
                         <a class="mobile-app__button" href="https://play.google.com/store/apps" target="_blank">
                             <svg class="mobile-app__button-icon" width="36" height="36">
-                                <use href="./images/icons-sprite.svg#google-play"></use>
+                                <use href="./assets/images/icons-sprite.svg#google-play"></use>
                             </svg>
                             <span class="mobile-app__button-text">
                                 <span class="mobile-app__button-text-top">Available on</span>
@@ -144,7 +171,7 @@
                         </a>
                     </div>
                 </div>
-                <img class="mobile-app__image" src="./images/home/mobile-screens.png" alt="Mobile phones">
+                <img class="mobile-app__image" src="./assets/images/home/mobile-screens.png" alt="Mobile phones">
             </section>
         </main>
         <footer class="contacts" id="contacts">
@@ -156,19 +183,19 @@
                     <ul class="contacts__list-links-social">
                         <li><a class="contacts__link-social" href="https://twitter.com/" target="_blank">
                                 <svg class="contacts__icon-social" width="24" height="24">
-                                    <use href="./images/icons-sprite.svg#twitter"></use>
+                                    <use href="./assets/images/icons-sprite.svg#twitter"></use>
                                 </svg>
                             </a>
                         </li>
                         <li><a class="contacts__link-social" href="https://instagram.com/" target="_blank">
                                 <svg class="contacts__icon-social" width="24" height="24">
-                                    <use href="./images/icons-sprite.svg#instagram"></use>
+                                    <use href="./assets/images/icons-sprite.svg#instagram"></use>
                                 </svg>
                             </a>
                         </li>
                         <li><a class="contacts__link-social" href="https://facebook.com/" target="_blank">
                                 <svg class="contacts__icon-social" width="24" height="24">
-                                    <use href="./images/icons-sprite.svg#facebook"></use>
+                                    <use href="./assets/images/icons-sprite.svg#facebook"></use>
                                 </svg>
                             </a>
                         </li>
@@ -180,20 +207,20 @@
                         <li><a class="contacts__link-service" href="https://maps.app.goo.gl/wyy56ReSMhwCt32A7"
                                 target="_blank">
                                 <svg class="contacts__icon-service" width="20" height="20">
-                                    <use href="./images/icons-sprite.svg#pin-alt"></use>
+                                    <use href="./assets/images/icons-sprite.svg#pin-alt"></use>
                                 </svg>8558 Green Rd., LA
                             </a>
                         </li>
                         <li><a class="contacts__link-service" href="tel:+16035550123">
                                 <svg class="contacts__icon-service" width="20" height="20">
-                                    <use href="./images/icons-sprite.svg#phone"></use>
+                                    <use href="./assets/images/icons-sprite.svg#phone"></use>
                                 </svg>+1 (603) 555-0123
                             </a>
                         </li>
                         <li>
                             <span class="contacts__schedule">
                                 <svg class="contacts__icon-service" width="20" height="20">
-                                    <use href="./images/icons-sprite.svg#clock"></use>
+                                    <use href="./assets/images/icons-sprite.svg#clock"></use>
                                 </svg>Mon-Sat: 9:00 AM – 23:00 PM
                             </span>
                         </li>
@@ -201,5 +228,7 @@
                 </div>
             </div>
         </footer>
+        <script type="module" src="./scripts/burger-menu/burger-menu.js"></script>
+        <script type="module" src="./scripts/slider/slider.js"></script>
     </body>
 </html>
