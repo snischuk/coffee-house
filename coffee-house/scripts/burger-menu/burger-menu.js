@@ -7,15 +7,15 @@ function initBurgerMenu() {
         if(!burger.classList.contains('header__burger--active')) return;
         if (event.target.tagName !== 'A') return;
 
-        burger.classList.remove('header__burger--active');
         body.classList.remove('js-lock');
+        burger.classList.remove('header__burger--active');
         links.classList.remove('header__links-wrapper--active');
     }
 
     function toggleBurgerHandler() {
+        body.classList.toggle('js-lock');
         burger.classList.toggle('header__burger--active');
         links.classList.toggle('header__links-wrapper--active');
-        body.classList.toggle('js-lock');
 
         links.addEventListener('click', clickedLinkHandler, { once: true })
     }

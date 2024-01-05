@@ -16,7 +16,7 @@
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   width: 100%;
-  height: 100%;
+  height: 644px;
   object-fit: cover;
 }
 
@@ -75,20 +75,26 @@
   transition: all 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .enjoy {
-    padding-top: var(--header-height);
-  }
-
+@media (max-width: 800px) {
   .enjoy__info {
     padding: 100px 60px;
   }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 768px) {
+  .enjoy {
+    padding-top: var(--header-height);
+  }
+}
+
+@media (max-width: 760px) {
+  .enjoy__promo-video {
+    max-height: 550px;
+  }
+
   .enjoy__title {
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 72px;
+    line-height: 70px;
   }
 
   .enjoy__info {
@@ -96,8 +102,28 @@
   }
 }
 
-@media (hover: hover),
-(pointer: fine) {
+@media (max-width: 640px) {
+  .enjoy__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enjoy__title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 365px) {
+  .enjoy__title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+@media (hover: hover), (pointer: fine) {
   .enjoy__button--primary:hover .enjoy__icon-coffee-cup {
     margin-left: 8px;
     width: 20px;

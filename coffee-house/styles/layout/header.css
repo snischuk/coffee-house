@@ -85,12 +85,8 @@
 }
 
 @media (max-width: 768px) {
-  body.js-lock {
-    overflow: hidden;
-  }
-
   .header {
-    z-index: 50;
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -199,8 +195,7 @@
   }
 }
 
-@media (hover: hover),
-(pointer: fine) {
+@media (hover: hover), (pointer: fine) {
   .header__link:hover::after {
     left: 0;
     width: 100%;

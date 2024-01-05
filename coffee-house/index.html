@@ -48,7 +48,7 @@
         <main>
             <section class="enjoy">
                 <div class="enjoy__container">
-                    <video class="enjoy__promo-video" src="./assets/video/promo-coffee_2160p.webm" autoplay muted
+                    <video class="enjoy__promo-video" src="./assets/video/promo-coffee_2160p.webm" poster="./assets/images/home/img-hero.jpeg" autoplay muted
                         loop></video>
                     <div class="enjoy__info">
                         <h1 class="enjoy__title"><span class="enjoy__title--accent">Enjoy</span> premium coffee at our
@@ -69,33 +69,57 @@
                 <h2 class="favorites__title">Choose your <span class="favorites__title--accent">favorite</span> coffee
                 </h2>
                 <div class="favorites__slider">
-                    <button class="favorites__slider-btn" type="button">
+                    <button class="favorites__slider-btn" type="button" data-slider-btn="prev">
                         <svg class="favorites__icon-arrow-right favorites__icon-arrow-right--rotated" width="24"
                             height="24">
                             <use href="./assets/images/icons-sprite.svg#arrow-right"></use>
                         </svg>
                     </button>
-                    <div class="favorites__slider-content">
-                        <img class="favorites__slider-image" src="./assets/images/home/slider/coffee-slider-1.png"
-                            alt="S’mores Frappuccino">
-                        <h3 class="favorites__slider-title">S’mores Frappuccino</h3>
-                        <p class="favorites__slider-description">This new drink takes an espresso and mixes it with
-                            brown
-                            sugar
-                            and cinnamon before being topped with oat milk.</p>
-                        <span class="favorites__slider-price">$5.50</span>
+                    <div class="favorites__slider-window">
+                        <ul class="favorites__slider-track">
+                            <li class="favorites__slider-slide">
+                                <img class="favorites__slider-image"
+                                    src="./assets/images/home/slider/coffee-slider-1.png" alt="S’mores Frappuccino">
+                                <h3 class="favorites__slider-title">S’mores Frappuccino</h3>
+                                <p class="favorites__slider-description">This new drink takes an espresso and mixes it
+                                    with brown sugar and cinnamon before being topped with oat milk.</p>
+                                <span class="favorites__slider-price">$5.50</span>
+                            </li>
+                            <li class="favorites__slider-slide">
+                                <img class="favorites__slider-image"
+                                    src="./assets/images/home/slider/coffee-slider-2.png" alt="Caramel Macchiato">
+                                <h3 class="favorites__slider-title">Caramel Macchiato</h3>
+                                <p class="favorites__slider-description">Fragrant and unique classic espresso with rich
+                                    caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                <span class="favorites__slider-price">$5.00</span>
+                            </li>
+                            <li class="favorites__slider-slide">
+                                <img class="favorites__slider-image"
+                                    src="./assets/images/home/slider/coffee-slider-3.png" alt="Ice coffee">
+                                <h3 class="favorites__slider-title">Ice coffee</h3>
+                                <p class="favorites__slider-description">A popular summer drink that tones and
+                                    invigorates. Prepared from coffee, milk and ice.</p>
+                                <span class="favorites__slider-price">$4.50</span>
+                            </li>
+                        </ul>
                     </div>
-                    <button class="favorites__slider-btn" type="button">
+                    <button class="favorites__slider-btn" type="button" data-slider-btn="next">
                         <svg class="favorites__icon-arrow-right" width="24" height="24" viewBox="0 0 24 24">
                             <use href="./assets/images/icons-sprite.svg#arrow-right"></use>
                         </svg>
                     </button>
                 </div>
-                <div class="favorites__slider-progress-bar">
-                    <span class="favorites__slider-progress-line favorites__slider-progress-line--active"></span>
-                    <span class="favorites__slider-progress-line"></span>
-                    <span class="favorites__slider-progress-line"></span>
-                </div>
+                <ul class="favorites__slider-progress-bars">
+                    <li class="favorites__slider-progress-bar-container">
+                        <span class="favorites__slider-progress-bar"></span>
+                    </li>
+                    <li class="favorites__slider-progress-bar-container">
+                        <span class="favorites__slider-progress-bar"></span>
+                    </li>
+                    <li class="favorites__slider-progress-bar-container">
+                        <span class="favorites__slider-progress-bar"></span>
+                    </li>
+                </ul>
             </section>
             <section class="about" id="about">
                 <h2 class="about__title">Resource is <span class="about__title--accent">the perfect and cozy
@@ -205,5 +229,6 @@
             </div>
         </footer>
         <script type="module" src="./scripts/burger-menu/burger-menu.js"></script>
+        <script type="module" src="./scripts/slider/slider.js"></script>
     </body>
 </html>
