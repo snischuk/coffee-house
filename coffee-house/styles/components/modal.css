@@ -137,14 +137,14 @@
   gap: 20px;
 }
 
-.modal__total__text {
+.modal__total-text {
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
   line-height: 30px;
 }
 
-.modal__total__price {
+.modal__total-price {
   color: var(--text-dark);
   font-size: 24px;
   font-weight: 600;
