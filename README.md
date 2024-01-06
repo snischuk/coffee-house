@@ -1,2 +1,2 @@
 # coffee-house
-Coffee-house project
+Deploy: https://snischuk.github.io/coffee-house/
