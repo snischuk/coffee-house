@@ -1,2 +1,2 @@
 # coffee-house
-Coffee-house project
+Coffee-house
