@@ -1,0 +1,11 @@
+@import "./utils/normalize.css";
+@import "./utils/variables.css";
+
+@import "./layout/base.css";
+@import "./layout/header.css";
+@import "./layout/footer.css";
+
+@import "./components/enjoy.css";
+@import "./components/favorites.css";
+@import "./components/about.css";
+@import "./components/mobile-app.css";

@@ -1,0 +1,140 @@
+.enjoy {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--custom-gap) 100px;
+}
+
+.enjoy__container {
+  display: grid;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.enjoy__promo-video {
+  z-index: -1;
+  position: relative;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  width: 100%;
+  height: 644px;
+  object-fit: cover;
+}
+
+.enjoy__info {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.enjoy__title {
+  max-width: 718px;
+  font-size: 72px;
+  line-height: 76px;
+  color: var(--text-light);
+}
+
+.enjoy__title--accent {
+  color: var(--text-accent);
+  font-style: italic;
+}
+
+.enjoy__text {
+  max-width: 530px;
+  color: var(--text-light);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.enjoy__button {
+  cursor: pointer;
+  text-align: center;
+  color: var(--text-dark);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.enjoy__button--primary {
+  width: 200px;
+  padding: 20px 0;
+  border-radius: 100px;
+  background: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enjoy__icon-coffee-cup {
+  margin-left: 0;
+  width: 0;
+  opacity: 0;
+  fill: none;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  .enjoy__info {
+    padding: 100px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enjoy {
+    padding-top: var(--header-height);
+  }
+}
+
+@media (max-width: 760px) {
+  .enjoy__promo-video {
+    max-height: 550px;
+  }
+
+  .enjoy__title {
+    font-size: 72px;
+    line-height: 70px;
+  }
+
+  .enjoy__info {
+    padding: 60px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .enjoy__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .enjoy__title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 365px) {
+  .enjoy__title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}
+
+@media (hover: hover), (pointer: fine) {
+  .enjoy__button--primary:hover .enjoy__icon-coffee-cup {
+    margin-left: 8px;
+    width: 20px;
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .enjoy__icon-coffee-cup {
+    margin-left: 8px;
+    width: 20px;
+    opacity: 1;
+  }
+}

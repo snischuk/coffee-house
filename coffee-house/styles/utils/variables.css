@@ -1,0 +1,22 @@
+:root {
+  --text-dark: #403F3D;
+  --text-light: #E1D4C9;
+  --text-accent: #B0907A;
+
+  --bg-body: #E1D4C9;
+  --bg-container: #665F55;
+  --bg-backdrop: #;
+
+  --border-dark: #665F55;
+  --border-light: #C1B6AD;
+
+  --custom-gap: 40px;
+  --header-height: 100px;
+  --slidesCount: 3;
+}
+
+@media (max-width: 525px) {
+  :root {
+    --custom-gap: 16px;
+  }
+}
